@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_purple"
+    android:padding="10dp"
+    tools:context="com.evenhus.video.MainActivity">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:minHeight="40dp">
+
+        <Button
+            android:id="@+id/showButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/videoView"
+            android:layout_alignTop="@+id/videoView"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:onClick="video"
+            android:text="Show video" />
+
+        <Button
+            android:id="@+id/hideButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/videoView"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:layout_toEndOf="@+id/showButton"
+            android:onClick="hide"
+            android:text="Hide video"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/playSound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:onClick="sound"
+            android:text="Play sound" />
+
+        <Button
+            android:id="@+id/pauseSound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:onClick="pauseSound"
+            android:text="Pause sound" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_row="2"
+            android:minHeight="40dp" />
+
+        <SeekBar
+            android:id="@+id/seekBar2"
+            android:layout_width="match_parent"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_row="3" />
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_marginTop="20dp"
+            android:layout_row="4"
+            android:visibility="invisible" />
+
+    </GridLayout>
+
+
+</RelativeLayout>
